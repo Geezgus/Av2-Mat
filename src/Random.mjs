@@ -4,6 +4,7 @@ export class Random {
   #seed = 0
 
   constructor() {
+    // Save seed as current time in nanoseconds
     const [seconds, nanoseconds] = process.hrtime()
     this.#seed = (seconds * NANOSECOND_PER_SECOND + nanoseconds)
   }
